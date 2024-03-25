@@ -159,6 +159,7 @@ export default function videoCarousel( ) {
                   onLoadedMetadata={(e) => handleLoadedMetaData(i ,e)} 
                   onPlay={()=> {setVideo(prev => ({...prev, isPlaying: true}))}} 
                   onEnded={()=> i !== 3 ?  handleProcess('video-end', i) : handleProcess('video-last')}
+                  className={`${list.id == 2 && 'translate-x-44'} pointer-events-none`}
                 >
                   <source src={list.video} type="video/mp4"/>
                 </video>
